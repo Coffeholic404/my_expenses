@@ -1,19 +1,21 @@
 <template>
-    <h3>Add new transaction</h3>
-      <form id="form" @submit.prevent="onSubmit">
-        <div class="form-control">
-          <label for="text">Text</label>
-          <input type="text" id="text" v-model="text" placeholder="Enter text..." />
+  <div class=" flex flex-col space-y-4 ">
+    <h3 class=" mt-4 font-bold text-2xl">Add new transaction</h3>
+      <form class=" flex flex-col gap-3" id="form" @submit.prevent="onSubmit">
+        <div class="form-control space-y-1  rounded-md pb-2">
+          <label class=" inline-block text-xl" for="text">Text</label>
+          <input class=" rounded-sm block p-[10px] w-full focus:outline-none shadow-md" type="text" id="text" v-model="text" placeholder="Enter text..." />
         </div>
-        <div class="form-control">
-          <label for="amount"
+        <div class="form-control space-y-1 ">
+          <label class=" inline-block text-xl" for="amount"
             >Amount <br />
             (negative - expense, positive - income)</label
           >
-          <input type="text" id="amount" v-model="amount" placeholder="Enter amount..." />
+          <input class=" rounded-sm block p-[10px] w-full focus:outline-none shadow-md" type="text" id="amount" v-model="amount" placeholder="Enter amount..." />
         </div>
-        <button class="btn">Add transaction</button>
+        <button class="btn cursor-pointer bg-purple-500 shadow-sm text-white block rounded-md text-xl p-2 w-full mt-2 mx-0 mb-5">Add transaction</button>
       </form>
+    </div>
 </template>
 
 <script setup>

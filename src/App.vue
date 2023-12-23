@@ -1,14 +1,18 @@
 <template>
   <Header />
-  <div class="container">
-    <Balance :total="total" />
-    <IncomeExpenses :income="+income" :expenses="+expenses" />
-    <TransactionList
-      :transactions="transactions"
-      @transactionDeleted="handleTransactionDeleted"
-    />
-    <AddTransaction @transactionSubmitted="handleTransactionSubmitted" />
-  </div>
+  <main class=" container">
+    <section class=" my-4 max-w-lg  h-40 lg:max-w-full lg:flex bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl shadow-md">
+      <Balance :total="total"/>
+    </section>
+    <div>
+      <IncomeExpenses :income="+income" :expenses="+expenses"/>
+    </div>
+  </main>
+  <section>
+    <TransactionList :transactions="transactions"
+      @transactionDeleted="handleTransactionDeleted"/>
+      <AddTransaction  @transactionSubmitted="handleTransactionSubmitted"/>
+  </section>
 </template>
 
 <script setup>
@@ -17,6 +21,7 @@ import Balance from './components/Balance.vue';
 import IncomeExpenses from './components/IncomeExpenses.vue';
 import TransactionList from './components/TransactionList.vue';
 import AddTransaction from './components/AddTransaction.vue';
+
 
 import { ref, computed, onMounted } from 'vue';
 
