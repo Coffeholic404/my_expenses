@@ -1,7 +1,7 @@
 <template>
   <Header />
   <main class=" container">
-    <section class=" my-4 max-w-lg  h-40 lg:max-w-full lg:flex bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl shadow-md">
+    <section class=" my-4 max-w-lg  h-40 lg:max-w-full lg:flex bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl shadow-md xs:ml-6 ">
       <Balance :total="total"/>
     </section>
     <div>
