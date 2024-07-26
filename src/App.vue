@@ -1,18 +1,18 @@
 <template>
   <Header />
   <main class=" container">
-    <section class=" my-4 max-w-lg  h-40 lg:max-w-full lg:flex bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl shadow-md xs:ml-6 ">
+    <section class=" my-4 max-w-lg  h-40 lg:max-w-full lg:flex bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl shadow-md  justify-self-stretch ">
       <Balance :total="total"/>
     </section>
     <div>
       <IncomeExpenses :income="+income" :expenses="+expenses"/>
     </div>
-  </main>
-  <section>
-    <TransactionList :transactions="transactions"
+    <section>
+      <TransactionList :transactions="transactions"
       @transactionDeleted="handleTransactionDeleted"/>
       <AddTransaction  @transactionSubmitted="handleTransactionSubmitted"/>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script setup>

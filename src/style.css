@@ -54,3 +54,10 @@ body {
   .delete-btn:focus {
     outline: 0;
   }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  justify-items: center;
+}
