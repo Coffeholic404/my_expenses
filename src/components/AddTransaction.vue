@@ -4,14 +4,14 @@
       <form class=" flex flex-col gap-3" id="form" @submit.prevent="onSubmit">
         <div class="form-control space-y-1  rounded-md pb-2">
           <label class=" inline-block text-xl" for="text">Text</label>
-          <input class=" rounded-sm block p-[10px] w-full focus:outline-none shadow-md" type="text" id="text" v-model="text" placeholder="Enter text..." />
+          <input class=" rounded-md w-full h-12 block p-[10px]  focus:outline-none shadow-md" type="text" id="text" v-model="text" placeholder="Enter text..." />
         </div>
         <div class="form-control space-y-1 ">
           <label class=" inline-block text-xl" for="amount"
             >Amount <br />
             (negative - expense, positive - income)</label
           >
-          <input class=" rounded-sm block p-[10px] w-full focus:outline-none shadow-md" type="text" id="amount" v-model="amount" placeholder="Enter amount..." />
+          <input class=" rounded-md block p-[10px] w-full h-12 focus:outline-none shadow-md" type="text" id="amount" v-model="amount" placeholder="Enter amount..." />
         </div>
         <button class="btn cursor-pointer bg-purple-500 shadow-sm text-white block rounded-md text-xl p-2 w-full mt-2 mx-0 mb-5">Add transaction</button>
       </form>
